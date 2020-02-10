@@ -2,6 +2,7 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 from django.urls.base import reverse
 from .forms import SigninForm
+import blog
 
 
 # login과 authenticate 기능을 사용하기위해 선언
@@ -13,7 +14,6 @@ def signin(request):  # 로그인 기능
         return render(request, 'login/login_menu.html')
 
     elif request.method == "POST":
-        form = SigninForm(request.POST)
         # id = request.POST['username']
         # pw = request.POST['password']
         # 위 2개의 코드는 유저네임 혹은 비번이 없으면 에러를 일으킴.
@@ -25,6 +25,6 @@ def signin(request):  # 로그인 기능
 
         if u is not None:  # u에 특정 값이 있다면
             login(request, user=u)  # u 객체로 로그인해라
-            return redirect('post_list/')
+            return redirect('http://127.0.0.1:8000/')
         else:
-            return render(request, 'login/login_menu.html')
+            return render(request, 'login/login_menu.html', {'error': '아이디 혹은 비밀번호를 확인해주세요.'})
