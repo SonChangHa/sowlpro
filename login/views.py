@@ -1,26 +1,30 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.urls.base import reverse
 from django.contrib.auth import login, authenticate
-from .forms import LoginForm
+from django.shortcuts import render, redirect
+from django.urls.base import reverse
+from .forms import SigninForm
+
+
 # login과 authenticate 기능을 사용하기위해 선언
 # login은 login처리를 해주며, authenticate는 아이디와 비밀번호가 모두 일치하는 User 객체를 추출
 
 
-def login_menu(request):  # 로그인 기능
+def signin(request):  # 로그인 기능
     if request.method == "GET":
-        return render(request, 'login/login_menu.html', {'f': SigninForm()})
+        return render(request, 'login/login_menu.html')
 
     elif request.method == "POST":
         form = SigninForm(request.POST)
-        id = request.POST['username']
-        pw = request.POST['password']
+        # id = request.POST['username']
+        # pw = request.POST['password']
+        # 위 2개의 코드는 유저네임 혹은 비번이 없으면 에러를 일으킴.
+        id = request.POST.get('username')
+        pw = request.POST.get('password')
         u = authenticate(username=id, password=pw)
         # authenticate를 통해 DB의 username과 password를 클라이언트가 요청한 값과 비교한다.
         # 만약 같으면 해당 객체를 반환하고 아니라면 none을 반환한다.
 
-        if u:  # u에 특정 값이 있다면
+        if u is not None:  # u에 특정 값이 있다면
             login(request, user=u)  # u 객체로 로그인해라
-            return HttpResponseRedirect(reverse('vote:index'))
+            return redirect('post_list/')
         else:
-            return render(request, 'login/login_menu.html', {'f': form, 'error': '아이디나 비밀번호가 일치하지 않습니다.'})
+            return render(request, 'login/login_menu.html')

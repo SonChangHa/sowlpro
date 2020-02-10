@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <link href="{% static 'css/login_menu.css' %}" rel="stylesheet" type="text/css" />
@@ -9,8 +10,8 @@
     <div class="inner_login">
         <div class="login_sowl">
             <h1>S.owl</h1>
-            <form method="post" id="authForm" action="https://www.tistory.com/auth/login">
-                <input type="hidden" name="redirectUrl" value="https://blogpack.tistory.com/manage">
+            <form method="post" id="authForm" action="./">{% csrf_token %}
+                <input type="hidden" name="redirectUrl" value=" ">
                 <fieldset>
                 <legend class="screen_out">로그인 정보 입력폼</legend>
                 <div class="box_login">
@@ -23,7 +24,7 @@
                     <input type="password" id="loginPw" name="password" placeholder="Password" >
                     </div>
                 </div>
-                <button type="submit" class="btn_login"  disabled>로그인</button>
+                <button type="submit" class="btn_login" >로그인</button>
                 <div class="login_append">
                     <div class="inp_chk"> <!-- 체크시 checked 추가 -->
                     <input type="checkbox" id="keepLogin" class="inp_radio"  name="keepLogin">
