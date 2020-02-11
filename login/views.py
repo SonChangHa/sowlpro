@@ -25,6 +25,6 @@ def signin(request):  # 로그인 기능
 
         if u is not None:  # u에 특정 값이 있다면
             login(request, user=u)  # u 객체로 로그인해라
-            return redirect('http://127.0.0.1:8000/')
+            return redirect('./post')
         else:
             return render(request, 'login/login_menu.html', {'error': '아이디 혹은 비밀번호를 확인해주세요.'})
