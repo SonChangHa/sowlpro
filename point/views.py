@@ -1,0 +1,24 @@
+from django.shortcuts import render
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+def point_list(request):
+    scope = [
+        'https://spreadsheets.google.com/feeds',
+        'https://www.googleapis.com/auth/drive',
+    ]
+    json_file_name = 'angelic-tracer-264105-2bd30234b387.json'
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+    gc = gspread.authorize(credentials)
+    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1c-X7io-Y5EahzJGG4wVOZO4xGXjTeCgIy2xSMeMDWDA/edit#gid=0'
+    # 스프레스시트 문서 가져오기
+    doc = gc.open_by_url(spreadsheet_url)
+    # 시트 선택하기
+    worksheet = doc.worksheet('시트1')
+
+    for i in range(1,3):
+        row_data = worksheet.row_values(i)
+        #if not row_data:
+    return render(request, 'point/point.html', {'point': row_data})
+
+
