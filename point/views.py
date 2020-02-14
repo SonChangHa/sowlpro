@@ -22,10 +22,20 @@ def point_list(request):
     range_list = worksheet.range('A1:D180')
     # 범위에서 각 셀 값 가져오기
 
-    #이제 여기서 html로 어떻게 값을 띄울것 인지 고민
+    # 이제 여기서 html로 어떻게 값을 띄울것 인지 고민
+    pointlist = []
+    list = []
+    i = 0
     for cell in range_list:
-        print(cell.value)
+        if cell.value == '':
+            break
+        list.append(cell.value)
+        i = i + 1
+        if i == 4:
+            pointlist.append(list)
+            list = []
+            i = 0
 
-        return render(request, 'point/point.html', {'point': cell.value})
+    return render(request, 'point/point.html', {'point': pointlist})
 
 
