@@ -16,9 +16,16 @@ def point_list(request):
     # 시트 선택하기
     worksheet = doc.worksheet('시트1')
 
-    for i in range(1,3):
-        row_data = worksheet.row_values(i)
-        #if not row_data:
-    return render(request, 'point/point.html', {'point': row_data})
+    # for i in range(1,3):
+        # row_data = worksheet.row_values(i)
+    # 범위(셀 위치 리스트) 가져오기
+    range_list = worksheet.range('A1:D180')
+    # 범위에서 각 셀 값 가져오기
+
+    #이제 여기서 html로 어떻게 값을 띄울것 인지 고민
+    for cell in range_list:
+        print(cell.value)
+
+        return render(request, 'point/point.html', {'point': cell.value})
 
 
