@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
 from django.urls.base import reverse
 from .forms import SigninForm
@@ -25,6 +25,10 @@ def signin(request):  # 로그인 기능
 
         if u is not None:  # u에 특정 값이 있다면
             login(request, user=u)  # u 객체로 로그인해라
-            return redirect('./post')
+            return redirect('./')
         else:
             return render(request, 'login/login_menu.html', {'error': '아이디 혹은 비밀번호를 확인해주세요.'})
+
+def signout(request):
+    logout(request)
+    return redirect('./')
