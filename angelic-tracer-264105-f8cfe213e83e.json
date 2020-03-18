@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "angelic-tracer-264105",
+  "private_key_id": "f8cfe213e83e0d3c7828c7a48419429a9190227c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDy9yQ5rUjgKaVA\nSyazPLdt7nzvHtJ0DY6LvBF73nVtuvWAdsNx8xq6vzputxCxDxZgEUINlqMewacj\nNqtc+rAQkyLpaXbpjNPVxp5PIR48zVisZ2cKmEpMG0rJlXsZS+SoBjEfBcjm58hX\nqC8rCghyeX22iNRwSMvlyLOyy/iJPZsWs4CdI8cyVHZZsEEttUws0M5N3A3YAp0A\nNIdKrmOyhf7IYyNSjbvqZRXVjrp7MNAFklFz176XdZ9rXogtY4xsxliAyk9D3ami\no8R8SAzkkho1YZ3+Hfgwb4tjyi1MizEkub9tkUO4hRYC9RtTu/oXKnzKKo5rL39f\nDpzxG3iRAgMBAAECggEAQM+gQCpzSCiTxkTFvAY0QATgGsE0DnUXUzsFxu8ej/jR\nSEVl+V2KAcrFAYef0jteEp5H6mwGc0vhE8mfiJvun11AcNcLO12vnFTxIdaJxFpa\njxK+L9tT5l1ZY9CWF7dg9VlBfS8D2mR10rwwaOCyRCcYW7rAQHuKuG8DUGyMjb72\nM6KufRnJTLurMR+47JuEjM0PWSih2NmxiaomRIMGUMbaCYvL7+9iFYiWqvhvOOBg\n/gEdfQM12Vp2XlSnuKR4HxSTE9H90sgUNugVVc8fu32j6VtFs7KyfxfbFRZ7EIqA\nBIdgkH3QDRKaWlIaUn23owdgwM4+6ShTgUucLdBoCQKBgQD5nEAMDUvAnfv8kUz1\npxUTOg0F4f2M7Ux3WBe8t1n3cZ+WYYZyzobOnN2LPwmR4NHarAfHVr1/rjQqsNDb\nMlD6wcjuAgtrPFqwjARIx8nG13E8YqMCSnnO6SA8DD2pvggpEXtJhDR8u0dLn4zO\nQDbV7Q98LKb+6duInRRahWMwuwKBgQD5L1hzXUK+HXvTmF9mLCap0RcS3cwCMstQ\n7GK69KlnA5WuIQOtrcV4Omyfl+jogNaZS1XUcWGMMSbAA8Gwaur2IT3f/WW+2jwk\nTUxGSWIMJC/IT9AqQge0sGMqBCUoKlsTVfCg2T+3ZTsaxLFsBjGcsy8vPOjtjiq/\nPA9TH3n9IwKBgQCgdNoTJUTqCGThIkJ3s7Vvi6StgG3udujt2xo/PRo/X7I4CG9W\nQ/8SuHIOPjKXrQ8Z4/aIJPFiL4jnXIyWK800tPfGUFgo0j52OTvT0WKbSQlIyRuC\nsH+HDAOltjS5dihmxg8b3jmjaPxW17S7LTpS4LZQm5+qRIjUVC2uVwrBWwKBgQCH\n/FuD0bBbuhFaXvwo8Q1EfVPfOuVbicbE6cvThTNxgVZNCb1NKdjrDM88pRU41R7H\n14IGhr2aWTRxc1tfYGnLWka/FzVQWx6ZHQn0DZYRVCozYcMTXKeB5wSm6E4yxjKf\nsbW4wfZwqjEAIblFX3fxsSOd3tqq0Xvokuk2DqZvCwKBgCtfluQhyjP/Gb3oO4/s\nj+uBdCZYjxoSwZbodxUG+mHCjJQHHZAXdg3QZsvDEKjWf/zbf1QTdsDMjkJqP0i3\nAo4tDRHChmd6pKsGU8LMbQkPXoZa0z8I0/PQH9zdrJ/yaOHtYfC1IwTueOadChcY\niaUpkJMEA0+Z9ND0zHP2CX5K\n-----END PRIVATE KEY-----\n",
+  "client_email": "loveyougoogle@angelic-tracer-264105.iam.gserviceaccount.com",
+  "client_id": "115474745894476495582",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/loveyougoogle%40angelic-tracer-264105.iam.gserviceaccount.com"
+}

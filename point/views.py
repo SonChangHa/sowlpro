@@ -1,12 +1,13 @@
 from django.shortcuts import render
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+# from django.contrib.auth import authenticate
 
 scope = [
     'https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive',
 ]
-json_file_name = 'angelic-tracer-264105-2bd30234b387.json'
+json_file_name = 'angelic-tracer-264105-f8cfe213e83e.json'
 credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
 gc = gspread.authorize(credentials)
 spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1c-X7io-Y5EahzJGG4wVOZO4xGXjTeCgIy2xSMeMDWDA/edit#gid=0'
@@ -50,7 +51,32 @@ def point_list_mine(request):
         list.append(cell.value)
         i = i + 1
         if i == 4:
-            if list[0] == user.first_name + user.last_name:
+            if list[0] == request.user.last_name + request.user.first_name:
                 pointlist.append(list)
             list = []
             i = 0
+# if list[0] == request.user.last_name + request.user.first_name: 를 pointlist[0][0] == 으로 바꾸면 더 간결해질듯
+
+    return render(request, 'point/point_mine.html', {'point': pointlist})
+
+def throw_point(request):
+    range_list = worksheet.range('A1:D180')
+    pointlist = []
+    list = []
+    i = 0
+    for cell in range_list:
+        if cell.value == '':
+            break
+        list.append(cell.value)
+        i = i + 1
+        if i == 4:
+            if list[0] == request.user.last_name + request.user.first_name:
+                pointlist.append(list)
+            list = []
+            i = 0
+
+    allpoint = 0
+    for i in range(len(pointlist)):
+        allpoint += int(pointlist[i][3])
+
+    return allpoint

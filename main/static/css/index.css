@@ -27,91 +27,122 @@
 #left{
   float: left;
       height: 500px;
-      width: 15%;
+      width: 20%;
       position: relative;
 }
-    .button-wrapper {
-        display: inline-block;
-        margin: 20px 5px;
-        padding: 20px;
-    }
-    .dark-button-2 {
-        background: #333;
-    }
-    .button {
-        background: #fff;
-        border: none;
-        padding: 2px;
-        cursor: pointer;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        transition: all .3s ease-in-out .3s;
-        margin: 0 auto;
-        width: 150px;
-        text-align: center;
-    }
-    .dark-button-2 .button,
-    .dark-button-2 .button .login-botton {
-        background: #333;
-        color: #fff;
-    }
-    .dark-button-2 .button:after,
-    .dark-button-2 .button:before,
-    .dark-button-2 .button:hover .login-botton {
-        background: #fff;
-        color: #444;
-    }
-    .login-botton {
-        display: block;
-        padding: 15px 30px;
-        background: #fff;
-        z-index: 100;
-        position: relative;
-        transition: all .3s ease-in-out .3s;
-    }
-    .button:hover .login-botton {
-        background: #36B4C7;
-        color: #fff;
-        transition: all .3s ease-in-out .3s;
-    }
-    .button:after {
-        bottom: -100%;
-        right: -100%;
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: #36B4C7;
-        transition: all .3s ease-in-out .5s;
-    }
-    .button:hover:after {
-        right: 0;
-        bottom: 0;
-        transition: all ease-in-out .3s;
-    }
-    .button:before {
-        top: -100%;
-        left: -100%;
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: #36B4C7;
-        transition: all .3s ease-in-out .5s;
-    }
-    .button:hover:before {
-        left: 0;
-        top: 0;
-        transition: all ease-in-out .35s;
-    }
+.button-wrapper {
+    display: inline-block;
+    margin: 20px 5px;
+    padding: 20px;
+}
+.dark-button-2 {
+    background: #333;
+}
+.button {
+    background: #fff;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out .3s;
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+}
+.dark-button-2 .button,
+.dark-button-2 .button .login-botton {
+    background: #333;
+    color: #fff;
+}
+.dark-button-2 .button:after,
+.dark-button-2 .button:before,
+.dark-button-2 .button:hover .login-botton {
+    background: #fff;
+    color: #444;
+}
+.login-botton {
+    display: block;
+    padding: 15px 30px;
+    background: #fff;
+    z-index: 100;
+    position: relative;
+    transition: all .3s ease-in-out .3s;
+}
+.button:hover .login-botton {
+    background: #36B4C7;
+    color: #fff;
+    transition: all .3s ease-in-out .3s;
+}
+.button:after {
+    bottom: -100%;
+    right: -100%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #36B4C7;
+    transition: all .3s ease-in-out .5s;
+}
+.button:hover:after {
+    right: 0;
+    bottom: 0;
+    transition: all ease-in-out .3s;
+}
+.button:before {
+    top: -100%;
+    left: -100%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #36B4C7;
+    transition: all .3s ease-in-out .5s;
+}
+.button:hover:before {
+    left: 0;
+    top: 0;
+    transition: all ease-in-out .35s;
+}
+/* 로그인후 css */
+.user-panel{
+  margin-left: 5px;
+  margin-top: 20px;
+  width:194px;
+  height: 100px;
+  text-align: center;
+background: #2d2d2d;
+}
+.user-panel span{
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+a{
+  text-decoration:none;
+}
+.logout-btu{
+  float: right;
+  background-color:#4d4d4d;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+.logout-btu:hover {
+  background-color: #BDBDBD;
+}
+.logout-btu span{
+    text-align: center;
+  font-size: 5px;
+}
 #main{
   float: left;
    height: 500px;
-   width: 85%;
+   width: 80%;
    position: relative;
 }
 
+}
 #navi {
    position: relative;
         height: 30px;
@@ -131,7 +162,7 @@
         text-decoration:none;
         color: white;
         display: block;
-        width: 200px;
+        width: 202px;
         font-size: 12px;
         font-weight: bold;
         font-family: "Trebuchet MS", Dotum, Arial;
@@ -139,4 +170,37 @@
 #navi .menuLink:hover {
         color: red;
         background-color: #4d4d4d;
+}
+.navi{
+    height: 30px;
+}
+.main-box{
+  width: 350px;
+  border: 1px solid #ddd;
+  margin-top: 16px;
+    margin-left: 40px;
+    background: #2d2d2d;
+    padding: 12px;
+
+}
+.main-head {
+    border-bottom: 1px solid #AA1212;
+    margin: 0px 0px 12px;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+.main-head a{
+  color : white;
+}
+.post-row a{
+  color : white;
+}
+  .pull-right {
+    float: right!important;
+}
+.col-lg-6{
+  width: 50%;
+  float: left;
+  position: relative;
+    min-height: 1px;
 }
