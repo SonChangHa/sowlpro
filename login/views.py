@@ -1,14 +1,18 @@
 from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
 from django.urls.base import reverse
+from point.views import throw_point
 from .forms import SigninForm
 
 
 # login과 authenticate 기능을 사용하기위해 선언
 # login은 login처리를 해주며, authenticate는 아이디와 비밀번호가 모두 일치하는 User 객체를 추출
 
+myPoint = 0
+print(myPoint)
 
 def signin(request):  # 로그인 기능
+
     if request.method == "GET":
         return render(request, 'login/login_menu.html')
 

@@ -20,8 +20,7 @@ worksheet = doc.worksheet('시트1')
 # row_data = worksheet.row_values(i)
 # 범위(셀 위치 리스트) 가져오기
 
-
-def point_list(request):
+def get_pointlist(request):
     range_list = worksheet.range('A1:D180')
 
     # 이제 여기서 html로 어떻게 값을 띄울것 인지 고민
@@ -38,45 +37,40 @@ def point_list(request):
             list = []
             i = 0
 
+    return pointlist
+
+
+
+def point_list(request):
+
+    pointlist = get_pointlist(request)
+
     return render(request, 'point/point.html', {'point': pointlist})
 
 def point_list_mine(request):
-    range_list = worksheet.range('A1:D180')
-    pointlist = []
-    list = []
-    i = 0
-    for cell in range_list:
-        if cell.value == '':
-            break
-        list.append(cell.value)
-        i = i + 1
-        if i == 4:
-            if list[0] == request.user.last_name + request.user.first_name:
-                pointlist.append(list)
-            list = []
-            i = 0
-# if list[0] == request.user.last_name + request.user.first_name: 를 pointlist[0][0] == 으로 바꾸면 더 간결해질듯
 
-    return render(request, 'point/point_mine.html', {'point': pointlist})
+    myPointList = []
+    pointlist = get_pointlist(request)
+
+    if request.user.is_active:
+        for i in pointlist:
+            if i[0] == request.user.last_name + request.user.first_name:
+                myPointList.append(i)
+
+
+    return render(request, 'point/point_mine.html', {'point': myPointList})
 
 def throw_point(request):
-    range_list = worksheet.range('A1:D180')
-    pointlist = []
-    list = []
-    i = 0
-    for cell in range_list:
-        if cell.value == '':
-            break
-        list.append(cell.value)
-        i = i + 1
-        if i == 4:
-            if list[0] == request.user.last_name + request.user.first_name:
-                pointlist.append(list)
-            list = []
-            i = 0
+    myPointList = []
+    pointlist = get_pointlist(request)
+
+    if request.user.is_active:
+        for i in pointlist:
+            if i[0] == request.user.last_name + request.user.first_name:
+                myPointList.append(i)
 
     allpoint = 0
-    for i in range(len(pointlist)):
-        allpoint += int(pointlist[i][3])
+    for i in myPointList:
+        allpoint += int(i[3])
 
     return allpoint
