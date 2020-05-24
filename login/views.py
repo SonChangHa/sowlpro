@@ -2,7 +2,6 @@ from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
 from django.urls.base import reverse
 from .forms import SigninForm
-import blog
 
 
 # login과 authenticate 기능을 사용하기위해 선언
