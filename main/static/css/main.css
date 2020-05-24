@@ -1,0 +1,36 @@
+.submenuLink:hover {
+  /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
+  color: red;
+  background-color: #dddddd;
+}
+
+.main-box{
+  width: 350px;
+  border: 1px solid #ddd;
+  margin-top: 16px;
+    margin-left: 40px;
+    background: #2d2d2d;
+    padding: 12px;
+
+}
+.main-head {
+    border-bottom: 1px solid #AA1212;
+    margin: 0px 0px 12px;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+.main-head a{
+  color : white;
+}
+.post-row a{
+  color : white;
+}
+  .pull-right {
+    float: right!important;
+}
+.col-lg-6{
+  /* width: 50%; 디폴트값으로 둬도 될듯 */
+  float: left;
+  position: relative;
+    min-height: 1px;
+}
