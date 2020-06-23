@@ -7,4 +7,5 @@ urlpatterns = [
     path('', include('point.urls')),
     path('', include('main.urls')),
     path('', include('write.urls')),
+    path('', include('table.urls')),
 ]

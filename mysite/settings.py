@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'point',
     'main',
     'write',
+    'table',
 ]
 
 MIDDLEWARE = [
