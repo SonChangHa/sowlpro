@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'login',
     'point',
     'main',
-    'write',
     'table',
 ]
 
