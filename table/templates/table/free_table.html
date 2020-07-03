@@ -27,19 +27,18 @@
                 <th>제목</th>
                 <th>작성자</th>
                 <th>날짜</th>
-                <th>조회수</th>
               </tr>
             </thead>
 
             <tbody>
-
+              {% for post in posts %}
               <tr>
-                <td>1</td>
-                <td>본격!</td>
-                <td>개시판짜기</td>
-                <td>오늘</td>
-                <td>100000</td>
+                  <th><a href="{% url 'post_detail' pk=post.pk %}">{{ forloop.counter }}</a></th>
+                  <th><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></th>
+                  <th><a href="{% url 'post_detail' pk=post.pk %}">{{ post.author }}</a></th>
+                  <th><a href="{% url 'post_detail' pk=post.pk %}">{{ post.published_date }}</a></th>
               </tr>
+            {% endfor %}
             </tbody>
 
           </table>
@@ -59,6 +58,7 @@
              <li><a href="#">9</a></li>
              <li><a href="#">10</a></li>
              <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+              <input type="button" value="글쓰기" class="pull-right" onClick="location.href += 'new'"/>
            </ul>
         </div>
       </div>
