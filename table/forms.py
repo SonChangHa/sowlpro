@@ -9,7 +9,7 @@ class FreeTableForm(forms.ModelForm):
         fields = ('title', 'text')
         widgets = {
             'title': forms.TextInput(attrs={'placeholder':"제목을 입력하세요.", 'name':"subject", 'class':"form-control"}),
-            'text': forms.Textarea(attrs={'cols':"10", 'placeholder':"제목을 입력하세요.", 'class':"form-control", 'name':"content"})
+            'text': forms.Textarea(attrs={'cols':"10", 'placeholder':"내용을 입력하세요.", 'class':"form-control", 'name':"content"})
         }
         labels = {
             'title': '글 제목',

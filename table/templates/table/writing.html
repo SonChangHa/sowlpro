@@ -26,13 +26,15 @@
     <table class="table table-bordered">
         <tbody>
         <form method="post" encType="multiplart/form-data">{% csrf_token %}
-            {% for field in form %}
             <tr>
                 <th>제목: </th>
-                <td>{{ field.label }}</td>
+                <td>{{ form.title }}</td>
             </tr>
             <tr>
-                {% endfor %}
+                <th>내용: </th>
+                <td>{{ form.text }}</td>
+            </tr>
+            <tr>
                 <td colspan="2">
                     <input type="submit" value="등록" onclick="sendData()" class="pull-right"/>
                     <input type="button" value="reset" class="pull-left"/>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="{% static 'css/table1.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<div class="row-1">
+  <div class="col-lg-6 col-15">
+    <div class="main-box">
+      <div class="main-head">
+        <a href="#">
+          <span class="pull-right main-more">+더보기</span>
+          공지사항
+        </a>
+      </div>
+      <div class="miso-post-list">
+        <div class="post-wrap">
+
+          <ul class="post-list">
+            <li class="post-row">
+              <a href="#" class="ellipsis">
+                테스트 </a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-15">
+    <div class="main-box">
+      <div class="main-head">
+        <a href="#">
+          <span class="pull-right main-more">+더보기</span>
+          자유게시판
+        </a>
+      </div>
+      <div class="miso-post-list">
+        <div class="post-wrap">
+
+          <ul class="post-list">
+            <li class="post-row">
+              <a href="#" class="ellipsis">
+                테스트 </a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-2">
+  <div class="col-lg-6 col-15">
+    <div class="main-box">
+      <div class="main-head">
+        <a href="#">
+          <span class="pull-right main-more">+더보기</span>
+          프로잭트게시판
+        </a>
+      </div>
+      <div class="miso-post-list">
+        <div class="post-wrap">
+
+          <ul class="post-list">
+            <li class="post-row">
+              <a href="#" class="ellipsis">
+                테스트 </a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-15">
+    <div class="main-box">
+      <div class="main-head">
+        <a href="#">
+          <span class="pull-right main-more">+더보기</span>
+          사진게시판
+        </a>
+      </div>
+      <div class="miso-post-list">
+        <div class="post-wrap">
+          <ul class="post-list">
+            <li class="post-row">
+              <a href="#" class="ellipsis">
+                테스트 </a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div style="text-align: center;">
+          <ul class="pagination pagination-sm">
+             <li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+             <li><a href="#">1</a></li>
+             <li><a href="#">2</a></li>
+             <li><a href="#">3</a></li>
+             <li><a href="#">4</a></li>
+             <li><a href="#">5</a></li>
+             <li><a href="#">6</a></li>
+             <li><a href="#">7</a></li>
+             <li><a href="#">8</a></li>
+             <li><a href="#">9</a></li>
+             <li><a href="#">10</a></li>
+             <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+              <input type="button" value="글쓰기" class="pull-right" onClick="location.href += 'new'"/>
+           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" href="{% static 'js/bootstrap.js' %}"></script>
+</body>
+{% endblock %}
+
+</html>
