@@ -28,7 +28,7 @@ def signin(request):  # 로그인 기능
 
         if u is not None:  # u에 특정 값이 있다면
             login(request, user=u)  # u 객체로 로그인해라
-            return redirect('./')
+            return redirect('/')
         else:
             return render(request, 'login/login_menu.html', {'error': '아이디 혹은 비밀번호를 확인해주세요.'})
 

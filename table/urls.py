@@ -7,6 +7,8 @@ urlpatterns = [
     path('table/notice/new/', views.noticeTable_new, name='notice_new'),
     path('table/free/<int:pk>/', views.post_detail, name='post_detail'),
     path('table/photo/', views.photo_table, name='photo_table'),
+    path('table/rule/', views.rule_table, name='rule_table'),
+
 ]
 
 
