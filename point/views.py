@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -59,6 +60,7 @@ def point_list_mine(request):
 
 
     return render(request, 'point/point_mine.html', {'point': myPointList})
+
 
 def throw_point(request):
     myPointList = []

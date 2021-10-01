@@ -24,6 +24,10 @@ def photo_table(request):
     mypoint = throw_point(request)
     return render(request, 'table/photo_table.html', {'mypoint': mypoint})
 
+def rule_table(request):
+    mypoint = throw_point(request)
+    return render(request, 'table/photo_table.html', {'mypoint': mypoint, 'posts': posts})
+
 
 
 
@@ -37,17 +41,16 @@ def freeTable_new(request):
             post.published_date = timezone.now()
             post.save()
             return redirect('post_detail', pk=post.pk)
-        else:
-            form = FreeTableForm()
+    else:
+        form = FreeTableForm()
 
-        if request.user.is_active:
-            mypoint = throw_point(request)
-            return render(request, 'table/writing.html', {
+    mypoint = throw_point(request)
+
+
+    return render(request, 'table/writing.html', {
                 'mypoint': mypoint,
                 'form': form
             })
-
-    return render(request, 'table/writing.html')
 
 
 
